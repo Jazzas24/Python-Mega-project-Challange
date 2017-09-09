@@ -1,0 +1,26 @@
+"""
+Enter a number and have the program generate PI up to 
+that many decimal places. Keep a limit to how far the 
+program will go.
+
+INPUT: Number - round up to that many decimal places
+OUTPUT: PI rounded up to.
+
+"""
+import math
+#Promts just for one PI action. Unless you input characters. Then asks again.
+while True: 
+    try:
+        n = int(input('Enter a number/place to round: '))
+        if n > 15:
+            print('Limit reached (15)')
+            print(round(math.pi,15))
+        else:
+                print(round(math.pi,abs(n-1)))
+        break
+    except:
+        print('Please only use digits.')
+        continue
+
+
+    
